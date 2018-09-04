@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desenvolvendo Formulários em HTML</title>
+</head>
+
+<body>
+    <form action="servidor.php" method="POST">
+        <p>Nome completo:
+            <input type="text" name="nomeCompleto" placeholder="Informe seu nome completo" autofocus="true" required="true">
+        </p>
+
+        <p>E-mail:
+            <input type="email" name="email" placeholder="Informe seu e-mail">
+        </p>
+
+        <p>
+            <input type="radio" name="sexo" id="masculino" value="Masculino">
+            <label for="masculino">Masculino</label><br>
+            <input type="radio" name="sexo" id="feminino" value="Feminino">
+            <label for="feminino">Feminino</label><br>
+        </p>
+
+        <p>Data de nascimento:
+            <input type="text" name="dataNascimento" placeholder="dd/mm/aaaa" required="true"><br>
+        </p>
+
+        <p>Grau de escolaridade:
+            <select name="escolaridade" size="1">
+                <option value="Ensino Médio">Ensino Médio</option>
+                <option value="Superior Completo" selected="true">Superior Completo</option>
+                <option value="Pós-Graduação">Pós-Graduação</option>
+                <option value="Mestrado">Mestrado</option>
+                <option value="Doutorado">Doutorado</option>
+            </select>
+        </p>
+
+
+        <p>Estilo musical preferido:
+            <select name="gosto_musical" size="5" multiple>
+                <option value="Rock">Rock</option>
+                <option value="Funk">Funk</option>
+                <option value="Samba">Samba</option>
+                <option value="Pagode">Pagode</option>
+                <option value="Pop">Pop</option>
+            </select>
+        </p>
+
+        <p>Nome de usuário:
+            <input name="nomeDeUsuario" type="text">
+        </p>
+        <p>Senha:
+            <input name="senha" type="password">
+        </p>
+
+        <p>Cor preferida:
+            <input name="corPreferida" type="color" value="#ff0000">
+        </p>
+
+        <p>Quantidade de filhos:
+            <input type="number">
+        </p>
+
+        <p>Quantidade de veículos:
+            <span>0</span>
+            <input name="quantidadeDeVeiculos" type="range" min="0" max="5">
+            <span>5</span>
+        </p>
+
+        <p>Comentários sobre o site:
+            <textarea name="comentarios" id="" cols="50" rows="10">
+                Excelente site!
+          </textarea>
+        </p>
+
+        <input type="checkbox" name="emailMarketing" value="true">Desejo receber ofertas via e-mail<br>
+        <p>
+            <input type="submit" name="Enviar">
+            <input type="reset" name="Limpar campos">
+        </p>
+    </form>
+</body>
+
+</html>
